@@ -1,13 +1,15 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
+import type { ReactNode } from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
 type IMetaProps = {
   title: string;
-  description: string;
+  description?: string;
   canonical?: string;
+  children?: ReactNode;
 };
 
 const Meta = (props: IMetaProps) => {
@@ -59,6 +61,7 @@ const Meta = (props: IMetaProps) => {
           site_name: AppConfig.site_name,
         }}
       />
+      <div className="mx-auto max-w-screen-2xl">{props.children}</div>
     </>
   );
 };
