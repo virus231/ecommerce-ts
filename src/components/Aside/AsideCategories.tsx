@@ -6,7 +6,7 @@ type Props = {
   actionButtonText: string;
 };
 
-export const Aside = (props: Props) => {
+export const AsideCategories = (props: Props) => {
   const { title, options, actionButtonText } = props;
   return (
     <>

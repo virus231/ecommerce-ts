@@ -1,7 +1,7 @@
-import { Aside } from '@/components/AsideWithPromo/Aside';
-import { PromoBanner } from '@/components/Banner';
+import { PromoBanner } from '../Banner';
+import { AsideCategories } from './AsideCategories';
 
-const categories = [
+export const categories = [
   'Bakery',
   'Fruit and vegetables',
   'Meat and fish',
@@ -11,9 +11,9 @@ const categories = [
 
 export const AsideWithPromo = () => {
   return (
-    <div className="grid grid-cols-1 gap-2 p-5 md:grid-cols-2 md:gap-4 lg:grid-cols-8 lg:gap-6">
-      <div className="col-span-2 rounded-lg p-1 ">
-        <Aside
+    <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-8 lg:gap-6">
+      <div className="col-span-2 rounded-lg">
+        <AsideCategories
           title="Category menu"
           options={categories}
           actionButtonText={'Hello'}
